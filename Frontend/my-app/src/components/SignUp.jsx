@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios';
+import './css/SignUp.css';
 
 const SignUp = () => {
     const [formData,setFormData]=useState({
@@ -20,18 +21,27 @@ const SignUp = () => {
         try{
             const response = await axios.post('http://localhost:5000/api/signup', formData);
             console.log(response.data);
-            alert('User created successfully!');
+
+            window.location.reload();
+
         }
         catch(error){
             console.error(error);
             alert("Error creating user");
         }
+
+        setFormData({
+            name:'',
+            email:'',
+            username:'',
+            password:'',
+        });
     };
     
     return(
         <>
             <div className="form">
-                <h1>Sign Up</h1>
+                <h1 className='topic'>Sign Up</h1>
                 <form onSubmit={handleSubmit}>
                     <div className='name'>
                         <label htmlFor="name">Name:</label>

@@ -1,0 +1,76 @@
+
+.form {
+    margin: auto;
+    width: 30%;
+    border: 3px solid green;
+    padding: 20px;
+    background-color: aqua;
+    height: 100vh;
+}
+
+.topic{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+
+.name,.email,.username,.password{
+    display: flex;
+    width: 100%;
+    margin: 10px;
+}
+
+.name label,.email label,.username label,.username input,.password label{
+    flex: 0.3;
+    padding: 5px;
+}
+.name input,.email input,.username input,.password input{
+    flex: 0.7;
+    padding: 5px;
+    border-radius: 15px;
+    border-width: 1px;
+
+}
+
+.submit-btn{
+    margin: auto;
+    
+}
+
+.submit-btn button {
+    width: 100%;
+    background-color: initial;
+    background-image: linear-gradient(rgba(179, 132, 201, .84), rgba(57, 31, 91, .84) 50%);
+    border-radius: 25px;
+    border-width: 0;
+    box-shadow: rgba(57, 31, 91, 0.24) 0 2px 2px,rgba(179, 132, 201, 0.4) 0 8px 12px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: flex;
+    /* font-family: Quicksand,sans-serif;
+    font-size: 18px;
+    font-weight: 700; */
+    justify-content: center;
+    letter-spacing: .04em;
+    line-height: 8px;
+    /* margin: 20px; */
+    padding: 18px 18px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: rgba(255, 255, 255, 0.4) 0 0 4px,rgba(255, 255, 255, 0.2) 0 0 12px,rgba(57, 31, 91, 0.6) 1px 1px 4px,rgba(57, 31, 91, 0.32) 4px 4px 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+}   
+
+.submit-btn button:hover {
+    background-image: linear-gradient(#B384C9, #391F5B 50%);
+}
+
+@media (min-width: 768px) {
+    .submit-btn {
+    font-size: 21px;
+    padding: 18px 34px;
+  }
+}

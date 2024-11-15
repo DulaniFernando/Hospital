@@ -25,9 +25,9 @@ db.connect((err) => {
 });
 
 // Sample route
-app.get("/", (req, res) => {
-  res.send("Hello from the Node.js backend with MySQL!");
-});
+// app.get("/", (req, res) => {
+//   res.send("Hello from the Node.js backend with MySQL!");
+// });
 
 app.post("/api/signup", (req, res) => {
   const { name, email, username, password } = req.body;
@@ -37,7 +37,8 @@ app.post("/api/signup", (req, res) => {
     receivedData: { name, email },
   });
 
-  const sql = "INSERT INTO SIGNUP (NAME,EMAIL,USERNAME,PWORD) VALUES (?,?,?,?)";
+  const sql =
+    "INSERT INTO SIGNUP (NAME,EMAIL,USERNAME,PASSWORD) VALUES (?,?,?,?)";
 
   db.query(sql, [name, email, username, password], (err, result) => {
     if (err) {
